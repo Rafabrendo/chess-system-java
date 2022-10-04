@@ -17,6 +17,12 @@ public abstract class ChessPiece extends Piece{
 		return color;
 	}
 	
+	public ChessPosition getChessPosition() {
+		//Vou pegar a posição postion, que foi herdada da piece, e vou ter que converter esse positon 
+		//para ChessPositon. Para fazer essa conversão, usarei o metodo estatico que está na classe ChessPosition
+		return ChessPosition.fromPosition(position);
+	}
+	
 	protected boolean isThereOpponentPiece(Position position) {
 		ChessPiece p = (ChessPiece)getBoard().piece(position);
 		return p != null && p.getColor() != color;
