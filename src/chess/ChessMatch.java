@@ -86,11 +86,12 @@ public class ChessMatch {
 	}
 	
 	private Piece makeMove(Position source, Position target) {
-		Piece p = board.removePiece(source);
+		ChessPiece p = (ChessPiece)board.removePiece(source);
+		p.increaseMoveCount();
 		//Eu tiro a peça de origem do tabuleiro
 		Piece capturedPiece = board.removePiece(target);
 		//tiro do tabuleiro uma possivel peça capturada que está na posição de destino
-		board.placePiece(p,  target);
+		board.placePiece(p,  target); //Aqui é feito um upcasting naturalmente
 		//vou colocar na posição de destino a peça que estava na posição de destino
 		//tira da origem e poe no destino
 		
@@ -103,7 +104,8 @@ public class ChessMatch {
 	
 	private void undoMove(Position source, Position target, Piece capturedPiece) {
 		//vou ter que desfazer a logica de makeMove
-		Piece p = board.removePiece(target);
+		ChessPiece p = (ChessPiece)board.removePiece(target);
+		p.decreaseMoveCount();
 		board.placePiece(p, source);
 		
 		if (capturedPiece != null) {
