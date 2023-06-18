@@ -9,7 +9,7 @@
  also called western chess or international chess, is a two-player sport, which can be classified as a strategic board game, both recreational and competitive.</h4>
 
 <p align="center">
-  <a href="#">
+  <a href="https://github.com/Rafabrendo/chess-system-java/blob/main/LICENSE">
     <img src="https://img.shields.io/npm/l/react" alt="mit">
 </p>
 
