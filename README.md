@@ -24,6 +24,10 @@
 
 * Apply the main concepts of java OOP.
 
+## Preview
+
+<img src="imagensReadme/Gravação-de-tela-de-10-05-2024-23_54_04.gif" alt="chess game" style="width: 250px; height: 200px"></img>
+
 ## Key Features
 
 * Programming logic Algorithms using Java
